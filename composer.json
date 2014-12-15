@@ -1,0 +1,10 @@
+{
+    "name": "alexeyfreelancer/phlickr",
+    "version": "0.2.9",
+    "autoload": {
+        "psr-0" : {
+            "Phlickr_" : "./"
+        }
+    },
+    "include-path": ["./"]
+}
