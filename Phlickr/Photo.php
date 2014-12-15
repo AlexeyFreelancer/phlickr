@@ -606,6 +606,7 @@ class Phlickr_Photo extends Phlickr_Framework_ObjectBase {
         // set up the request
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
+		curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
         // make sure problems are caught
         curl_setopt($ch, CURLOPT_FAILONERROR, 1);
         // save to the file

@@ -140,6 +140,7 @@ class Phlickr_Request {
 
         // set up the request
         curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
         // make sure we submit this as a post
         curl_setopt($ch, CURLOPT_POST, true);
         if (isset($postParams)) {
