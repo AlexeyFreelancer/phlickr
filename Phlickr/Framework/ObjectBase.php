@@ -96,7 +96,7 @@ abstract class Phlickr_Framework_ObjectBase implements Phlickr_Framework_IObject
      * @return  object Phlickr_Request
      * @see     __construct()
      */
-    protected function &createRequest(Phlickr_Api $api, $id) {
+    protected function createRequest(Phlickr_Api $api, $id) {
         $request = $api->createRequest(
             $this->getRequestMethodName(),
             $this->getRequestMethodParams($id)
@@ -157,7 +157,7 @@ abstract class Phlickr_Framework_ObjectBase implements Phlickr_Framework_IObject
      * @return  object Plickr_Api
      * @see     __construct()
      */
-    public function &getApi() {
+    public function getApi() {
         return $this->_api;
     }
     /**

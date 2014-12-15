@@ -226,7 +226,7 @@ class Phlickr_Request {
      * @return  array
      * @see     setParams()
      */
-    public function &getParams()
+    public function getParams()
     {
         return $this->_params;
     }

@@ -96,7 +96,7 @@ abstract class Phlickr_Framework_ListBase implements Phlickr_Framework_IList {
      *
      * @return  object Plickr_Api
      */
-    public function &getApi() {
+    public function getApi() {
         return $this->_request->getApi();
     }
     /**
