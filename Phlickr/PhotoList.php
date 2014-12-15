@@ -136,7 +136,7 @@ class Phlickr_PhotoList implements Phlickr_Framework_IPhotoList {
      * @see     load(), refresh()
      */
     protected function requestXml($allowCached = false, $page) {
-        $params =& $this->_request->getParams();
+        $params = $this->_request->getParams();
         $params['page'] = $page;
         $params['per_page'] = $this->getPhotosPerPage();
 

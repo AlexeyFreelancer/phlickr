@@ -50,7 +50,7 @@ class Phlickr_Tests_Online_Request extends PHPUnit_Framework_TestCase {
     function testExecute_AddsToCache() {
         $url = $this->reqValid->buildUrl();
         $result = $this->reqValid->execute();
-        $cache =& $this->api->getCache();
+        $cache = $this->api->getCache();
 
         $this->assertTrue($cache->has($url), "URL should have been cached.");
         $actual = new Phlickr_Response($cache->get($url));

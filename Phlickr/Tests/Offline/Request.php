@@ -80,7 +80,7 @@ class Phlickr_Tests_Offline_Request extends PHPUnit_Framework_TestCase {
     function testGetParams_UseReferences() {
         $this->reqValid->setParams(array());
         $this->assertEquals(array(), $this->reqValid->getParams());
-        $result =& $this->reqValid->getParams();
+        $result = $this->reqValid->getParams();
         $result['foo'] = 'bar';
         $this->assertEquals(array('foo'=>'bar'), $this->reqValid->getParams());
     }

@@ -226,7 +226,7 @@ class Phlickr_Tests_Offline_Api extends PHPUnit_Framework_TestCase {
 
 
     function testAddResponseToCache() {
-        $cache =& $this->api->getCache();
+        $cache = $this->api->getCache();
 
         $request = $this->api->createRequest('method', array('foo'=>'bar'));
         $url = $request->buildUrl();

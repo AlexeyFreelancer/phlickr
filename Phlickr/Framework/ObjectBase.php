@@ -73,7 +73,7 @@ abstract class Phlickr_Framework_ObjectBase implements Phlickr_Framework_IObject
      *          Phlickr_XmlParseException
      */
     function __construct(Phlickr_Api $api, $source, $responseElement) {
-        $this->_api =& $api;
+        $this->_api = $api;
         $this->_respElement = $responseElement;
         if (is_null($source)) {
             throw new Phlickr_Exception("The source parameter cannot be null. Try passing in an Id or SimpleXML object. ");
@@ -81,9 +81,9 @@ abstract class Phlickr_Framework_ObjectBase implements Phlickr_Framework_IObject
             // if the source is xml see if we can parse an id out of it
             $this->_cachedXml = $source;
             $id = $this->getId();
-            $this->_request =& $this->createRequest($api, $id);
+            $this->_request = $this->createRequest($api, $id);
         } else {
-            $this->_request =& $this->createRequest($api, $source);
+            $this->_request = $this->createRequest($api, $source);
             $this->load();
         }
     }
